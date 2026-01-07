@@ -1,0 +1,53 @@
+/* 
+  The browser uses default values e.g. margin=8px p.padding...
+  html selector in video is defined in _global.scss. I'd leave it here
+ */
+
+html {
+  font-size: var(--font-size-root-1); // 10px
+  // scroll-behavior: smooth; /* animation for moving between sections */
+
+  /* 
+    Clicking on a section jumps to the section and
+    renders it to top=0. But since the header seciton
+    is sticky, it will not be seen -> position the
+    section to 11rem
+   */
+  // scroll-padding-top: 11rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit; /* from parent element */
+}
+
+*, /* universal selector only for HTML element  */
+*::before,  /* only for pseudo (virtual) elements */
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit; /* inherit from parent (default is blue)*/
+  display: inline-block; /* default inline (no width/height, does not start on a new line, only horizontal padding/margin) */
+}
+
+button {
+  background-color: transparent; /* no visible background (see whatever is behind the element), same as rgba(0, 0, 0, 0)*/
+  border: none;
+  cursor: pointer; /* index finger */
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body{
+  font-size: var(--font-size-16-default);
+  font-family: var(--font-family-rubik);
+  background-color: var(--color-background-body);
+  color: var(--color-border-grey);
+  border: none;
+}

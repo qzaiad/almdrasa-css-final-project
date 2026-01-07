@@ -1,0 +1,84 @@
+:root {
+  /*
+    62.5% is 62.5% of the browser?s default font size.
+    What that default is:
+    - Browsers default to 16px
+    - 62.5% of 16px = 10px
+   */
+  --font-size-root-1: 62.5%;
+  --font-family-rubik: "Rubik", sans-serif;
+  --font-size-10: 1rem;
+  --font-size-14: 1.4rem;
+  --font-size-16-default: 1.6rem;
+  --font-size-18: 1.8rem;
+  --font-size-20: 2rem;
+  --font-size-25: 2.5rem;
+  --font-size-30: 3rem;
+  --font-size-35: 3.5rem;
+  --font-size-50: 5rem;
+  --font-weight-regular-default: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --line-hight-30: 3rem;
+  --line-hight-45: 5.5rem;
+  --line-hight-50: 5rem;
+  --line-hight-70: 7rem;
+  --color-background-body: white;
+  --color-orange: #F53838;
+  --color-orange-sign-up: #F53855;
+  --color-border-grey: #DDDDDD;
+  --color-font-white: white;
+  --color-font-black: #0B132A;
+  --color-font-grey: #4F5665;
+}
+
+/* 
+  The browser uses default values e.g. margin=8px p.padding...
+  html selector in video is defined in _global.scss. I'd leave it here
+ */
+html {
+  font-size: var(--font-size-root-1);
+  /* 
+    Clicking on a section jumps to the section and
+    renders it to top=0. But since the header seciton
+    is sticky, it will not be seen -> position the
+    section to 11rem
+   */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit; /* from parent element */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit; /* inherit from parent (default is blue)*/
+  display: inline-block; /* default inline (no width/height, does not start on a new line, only horizontal padding/margin) */
+}
+
+button {
+  background-color: transparent; /* no visible background (see whatever is behind the element), same as rgba(0, 0, 0, 0)*/
+  border: none;
+  cursor: pointer; /* index finger */
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-size: var(--font-size-16-default);
+  font-family: var(--font-family-rubik);
+  background-color: var(--color-background-body);
+  color: var(--color-border-grey);
+  border: none;
+}/*# sourceMappingURL=style.css.map */
