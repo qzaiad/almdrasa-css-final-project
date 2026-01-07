@@ -47,7 +47,8 @@ ol {
 body{
   font-size: var(--font-size-16-default);
   font-family: var(--font-family-rubik);
+  line-height: var(--line-hight-30);
   background-color: var(--color-background-body);
-  color: var(--color-border-grey);
+  color: var(--color-font-grey);
   border: none;
 }

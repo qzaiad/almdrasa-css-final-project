@@ -78,7 +78,72 @@ ol {
 body {
   font-size: var(--font-size-16-default);
   font-family: var(--font-family-rubik);
+  line-height: var(--line-hight-30);
   background-color: var(--color-background-body);
-  color: var(--color-border-grey);
+  color: var(--color-font-grey);
   border: none;
+}
+
+.text-default {
+  font-size: var(--font-size-16-default);
+  font-weight: var(--font-weight-regular-default);
+  color: var(--color-font-grey);
+}
+
+.text-default-wt-medium {
+  font-size: var(--font-size-16-default);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-font-grey);
+}
+
+.heading1 {
+  font-size: var(--font-size-50);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-font-black);
+  line-height: var(--line-hight-70);
+}
+
+.heading2 {
+  font-size: var(--font-size-35);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-font-black);
+}
+
+.heading3, .heading3-bold {
+  font-size: var(--font-size-25);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-font-black);
+}
+
+.heading3-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.heading4 {
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-font-black);
+}
+
+.heading5 {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-font-black);
+}
+
+.strong-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.strong-bold {
+  font-weight: var(--font-weight-very-bold);
+}
+
+.container {
+  display: grid;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }/*# sourceMappingURL=style.css.map */
