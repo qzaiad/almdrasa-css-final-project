@@ -55,6 +55,8 @@
 }
 
 .container {
+  max-width: var(--page-max-width);
+  margin: 5rem auto;
   display: grid;
 }
 

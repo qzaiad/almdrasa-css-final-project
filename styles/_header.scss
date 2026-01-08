@@ -1,4 +1,54 @@
+/*
+  - header has 3 elements: .logo .nav .container_sign -> header flex
+   - .logo is left aligned
+   - .container_sign is right aligned
+   - .
 
-.header {
+  - each of .logo .nav .container_sign is also flex
+  - vertically center all elements -> align-items:center
+ */
+
+.header, .logo, .nav__list, .container_sign {
   display: flex;
+  align-items: center
+}
+
+.logo {
+  gap: 1rem;
+}
+
+.logo__img {
+  max-width: 3.5rem;
+  max-height: 3.623rem;
+}
+
+.nav {
+  flex: 1;  // takes all remaining space between logo and sign
+}
+
+.nav__list {
+  justify-content: center;  // center nav items in that space
+  gap: 2rem;
+}
+
+.container_sign {
+  gap: 3rem;
+}
+
+.sign-in {
+  color: var(--color-font-black);
+  font-weight: var(--font-weight-medium);
+}
+
+.sign-up {
+  color: var(--color-orange-sign-up);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-orange-sign-up);
+  border-radius: 50px;
+  /*
+    font size 16px the height of the text in design is 19px. But in my browser it is 30px.
+    Therefore I have to reduce the padding in order for the heighe including padding be 45px as in design
+   */
+  padding: 1.3rem 4.5rem; // 1.3rem 4.5rem;
+  padding: 0.75rem 4.5rem; // 1.3rem 4.5rem;
 }
