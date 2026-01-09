@@ -207,8 +207,11 @@ body {
     font size 16px the height of the text in design is 19px. But in my browser it is 30px.
     Therefore I have to reduce the padding in order for the heighe including padding be 45px as in design
    */
-  padding: 1.3rem 4.5rem;
-  padding: 0.75rem 4.5rem;
+  width: 15rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .get-started__data {
