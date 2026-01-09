@@ -238,4 +238,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.get-started__pic-content {
+  scale: 110%;
 }/*# sourceMappingURL=style.css.map */
