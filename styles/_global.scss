@@ -51,7 +51,7 @@
 }
 
 .strong-bold {
-  font-weight: var(--font-weight-very-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 .container {
@@ -63,4 +63,6 @@
 .section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin-bottom: 10rem; // in project 10.3rem
 }

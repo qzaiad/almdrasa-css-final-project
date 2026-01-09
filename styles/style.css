@@ -137,7 +137,7 @@ body {
 }
 
 .strong-bold {
-  font-weight: var(--font-weight-very-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 .container {
@@ -149,6 +149,8 @@ body {
 .section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin-bottom: 10rem;
 }
 
 /*
@@ -163,6 +165,10 @@ body {
 .header, .logo, .nav__list, .container_sign {
   display: flex;
   align-items: center;
+}
+
+.header {
+  margin-bottom: 10rem;
 }
 
 .logo {
@@ -203,4 +209,30 @@ body {
    */
   padding: 1.3rem 4.5rem;
   padding: 0.75rem 4.5rem;
+}
+
+.get-started__data {
+  display: flex;
+  flex-direction: column;
+}
+
+.get-started__header {
+  margin-bottom: 2rem;
+}
+
+/*
+  started__button is a flex item and not an inline element anymore
+ */
+.get-started__button {
+  color: var(--color-font-white);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-orange);
+  border-radius: 10px;
+  width: 25rem;
+  height: 6rem;
+  margin-top: 5rem;
+  box-shadow: 1.9rem 2.5rem 5.4rem rgba(245, 56, 56, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

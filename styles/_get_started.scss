@@ -1,0 +1,29 @@
+.get-started__data {
+  display: flex;
+  flex-direction: column;
+  // gap: 5rem;
+}
+
+.get-started__header {
+  margin-bottom: 2rem;
+}
+
+/*
+  started__button is a flex item and not an inline element anymore
+ */
+.get-started__button {
+  color: var(--color-font-white);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-orange);
+  // border: 1px solid var(--color-orange);
+  border-radius: 10px;
+  width: 25rem;
+  height: 6rem;
+  margin-top: 5rem;
+  // box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+  box-shadow: 1.9rem 2.5rem 5.4rem rgba(245, 56, 56, 0.35); // #F53838 var(--color-orange);
+  //---center link content using flex
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
