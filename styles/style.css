@@ -27,10 +27,12 @@
   --color-background-body: white;
   --color-orange: #F53838;
   --color-orange-sign-up: #F53855;
+  --color-border-light-grey: #EEEFF2;
   --color-border-grey: #DDDDDD;
   --color-font-white: white;
   --color-font-black: #0B132A;
   --color-font-grey: #4F5665;
+  --color-shadow-black: #0D1025;
   --page-max-width: 1140px;
 }
 
@@ -242,4 +244,37 @@ body {
 
 .get-started__pic-content {
   scale: 110%;
+}
+
+.statistics {
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  border-radius: 1rem;
+  box-shadow: 3.5rem 5.2rem 11.4rem rgba(13, 16, 37, 0.06);
+}
+
+.statistics__column {
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+  height: 12.55rem;
+}
+
+.statistics_img {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.statistics__data {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5rem;
+}
+
+.statistics__locations {
+  padding-left: 11.3rem;
+  padding-right: 11.3rem;
+  border-left: 2px solid var(--color-border-light-grey);
+  border-right: 2px solid var(--color-border-light-grey);
 }/*# sourceMappingURL=style.css.map */

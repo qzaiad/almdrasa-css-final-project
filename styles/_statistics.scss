@@ -1,0 +1,33 @@
+.statistics {
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  // border: 2px solid red;
+  border-radius: 1rem;
+  box-shadow: 3.5rem 5.2rem 11.4rem rgba($color: #0D1025, $alpha: 0.06);
+}
+
+.statistics__column {
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+  height: 12.55rem;
+}
+
+.statistics_img {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.statistics__data {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5rem;
+}
+
+.statistics__locations {
+  padding-left: 11.3rem;
+  padding-right: 11.3rem;
+  border-left: 2px solid var(--color-border-light-grey);
+  border-right: 2px solid var(--color-border-light-grey);
+}
