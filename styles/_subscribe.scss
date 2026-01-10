@@ -1,0 +1,19 @@
+.subscribe {
+  box-shadow: 3.1rem 1.6rem 11.4rem rgba($color: #0D1025, $alpha: 0.06);
+}
+
+.subscribe__now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+
+  background-color: var(--color-orange);
+  color: white;
+  border-radius: 1rem;
+  font-weight: var(--font-weight-bold);
+  width: 25rem;
+  height: 6rem;
+  box-shadow: 2rem 2.6rem 5.4rem rgba($color: #F53838, $alpha: 0.35);
+}
