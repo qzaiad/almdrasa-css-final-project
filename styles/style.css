@@ -156,6 +156,24 @@ body {
   margin-bottom: 10rem;
 }
 
+.vlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vitem:before {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.vitem {
+  font-size: var(--font-size-14);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /*
   - header has 3 elements: .logo .nav .container_sign -> header flex
    - .logo is left aligned
@@ -287,20 +305,84 @@ body {
 }
 
 .features__list {
-  display: flex;
-  flex-direction: column;
   gap: 1.5rem;
 }
 
 .features__item:before {
   content: url("../images/icons/bx_bxs-check-circle.svg");
-  width: 2.4rem;
-  height: 2.4rem;
 }
 
 .features__item {
-  font-size: var(--font-size-14);
+  gap: 1rem;
+}
+
+.plan {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10rem;
+}
+
+.plan__header {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.plan__paragraph {
+  text-align: center;
+}
+
+.plan__box {
+  max-height: 76rem;
+  border: 2px solid var(--color-border-grey);
+  border-radius: 10px;
+  padding: 8rem 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.plan__box:last-child {
+  border-color: var(--color-orange);
+}
+
+.plan__list {
+  gap: 1rem;
+}
+
+.plan__item::before {
+  content: url("../images/icons/check.svg");
+}
+
+.plan__item {
+  gap: 2rem;
+}
+
+.plan__price {
+  margin-top: auto;
+}
+
+.plan__month {
+  font-weight: var(--font-weight-regular-default);
+}
+
+.plan__select {
+  color: var(--color-orange);
+  font-weight: var(--font-weight-bold);
+  border: 2px solid var(--color-orange-sign-up);
+  border-radius: 50px;
+  /*
+    font size 16px the height of the text in design is 19px. But in my browser it is 30px.
+    Therefore I have to reduce the padding in order for the heighe including padding be 45px as in design
+   */
+  width: 17.8rem;
+  height: 4.5rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+}
+.plan__select-last {
+  color: var(--color-font-white);
+  background-color: var(--color-orange);
 }/*# sourceMappingURL=style.css.map */

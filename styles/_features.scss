@@ -6,20 +6,13 @@
 }
 
 .features__list {
-  display: flex;
-  flex-direction: column;
   gap: 1.5rem;
 }
 
 .features__item:before {
   content: url("../images/icons/bx_bxs-check-circle.svg");
-  width: 2.4rem;
-  height: 2.4rem;
 }
 
 .features__item {
-  font-size: var(--font-size-14);
-  display: flex;
-  align-items: center;
   gap: 1rem;
 }

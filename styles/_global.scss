@@ -67,3 +67,21 @@
   gap: 4rem;
   margin-bottom: 10rem; // in project 10.3rem
 }
+
+.vlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vitem:before {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.vitem {
+  font-size: var(--font-size-14);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
