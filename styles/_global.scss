@@ -68,6 +68,15 @@
   margin-bottom: 10rem; // in project 10.3rem
 }
 
+.section__header {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
 .vlist {
   display: flex;
   flex-direction: column;

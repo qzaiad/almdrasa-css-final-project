@@ -1,0 +1,44 @@
+.feedback__scroll {
+  grid-column: 1/-1;
+}
+
+.feedback__wrapper {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;  // ensure the boxes stay in one long line
+  gap: 5rem;
+}
+
+.feedback__rating-box {
+  padding: 3rem;
+  border: 2px solid var(--color-border-grey);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-shrink: 0; // prevent the boxes from squishing to fit the screen
+  flex-basis: 40rem;
+  // flex-grow: 0;
+  scroll-snap-align: end;
+}
+
+.feedback__person-description {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+// .feedback__person-img {
+//   width: 5rem;
+//   height: 5rem;
+// }
+
+.feedback__person {
+  display: flex;
+  flex-direction: column;
+  // gap: 0.5rem;
+}
+
+.feedback__rating {
+  margin-left: auto;
+}
