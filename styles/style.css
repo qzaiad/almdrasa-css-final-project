@@ -25,6 +25,7 @@
   --line-hight-50: 5rem;
   --line-hight-70: 7rem;
   --color-background-body: white;
+  --color-background-grey: #DDE0E4;
   --color-orange: #F53838;
   --color-orange-sign-up: #F53855;
   --color-border-light-grey: #EEEFF2;
@@ -449,8 +450,55 @@ body {
   margin-left: auto;
 }
 
+.feedback__scroll-bar {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feedback__scroll-state {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.feedback__dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--color-background-grey);
+  border-radius: 50%;
+}
+.feedback__dot:first-child {
+  width: 4.5rem;
+  background-color: var(--color-orange);
+  border-radius: 1.5rem;
+}
+
+.feedback__scroll-buttons {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.feedback__button {
+  width: 6rem;
+  height: 6rem;
+  color: var(--color-orange);
+  border: 2px solid var(--color-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feedback__button-right {
+  background-color: var(--color-orange);
+}
+
 .subscribe {
-  z-index: 1;
+  box-shadow: 3.1rem 1.6rem 11.4rem rgba(13, 16, 37, 0.06);
 }
 
 .subscribe__now {
