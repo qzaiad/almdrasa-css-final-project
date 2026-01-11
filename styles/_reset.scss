@@ -31,6 +31,7 @@ html {
 a {
   color: inherit; /* inherit from parent (default is blue)*/
   display: inline-block; /* default inline (no width/height, does not start on a new line, only horizontal padding/margin) */
+  text-decoration: none;
 }
 
 button {
