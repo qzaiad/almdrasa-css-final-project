@@ -1,12 +1,21 @@
 .subscribe {
+  // border: 1px solid red;
+  padding: 6rem 7rem;
+  margin-top: -6rem;
+  margin-bottom: 0;
+  background-color: var(--color-background-body);
   box-shadow: 3.1rem 1.6rem 11.4rem rgba($color: #0D1025, $alpha: 0.06);
+}
+
+.subscribe__content {
+  justify-self: left;
 }
 
 .subscribe__now {
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-self: center;
+  justify-self: right;
   align-self: center;
 
   background-color: var(--color-orange);
@@ -15,5 +24,6 @@
   font-weight: var(--font-weight-bold);
   width: 25rem;
   height: 6rem;
+  z-index: 1;
   box-shadow: 2rem 2.6rem 5.4rem rgba($color: #F53838, $alpha: 0.35);
 }

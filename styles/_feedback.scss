@@ -1,3 +1,7 @@
+.feedback {
+  // border: 1px solid blue;
+}
+
 .feedback__scroll {
   grid-column: 1/-1;
 }
@@ -44,6 +48,7 @@
 }
 
 .feedback__scroll-bar {
+  margin: 2rem 0;
   grid-column: 1/-1;
   display: flex;
   align-items: center;
@@ -71,7 +76,6 @@
 }
 
 .feedback__scroll-buttons {
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
