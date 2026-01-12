@@ -8,7 +8,19 @@
 
 .feedback__wrapper {
   display: flex;
-  overflow-x: auto;
+  overflow-x: auto; // overflowing x should scroll
+  /*
+    x:
+    - Snapping happens on the horizontal axis
+    - Vertical scrolling is ignored
+
+    mandatory:
+    - The browser must snap to the nearest snap point
+    - It cannot stop in between items
+
+    Second part in the child element is scroll-snap-align
+   */
+  scroll-snap-type: x mandatory;
   flex-wrap: nowrap;  // ensure the boxes stay in one long line
   gap: 5rem;
 }
