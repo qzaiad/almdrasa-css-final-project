@@ -57,7 +57,7 @@
 
 .container {
   max-width: var(--page-max-width);
-  margin: 5rem auto;
+  margin: 2rem auto 5rem; // margin-top should be 5rem, but I find it too much
   display: grid;
 }
 
