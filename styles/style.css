@@ -43,12 +43,14 @@
  */
 html {
   font-size: var(--font-size-root-1);
+  scroll-behavior: smooth; /* animation for moving between sections */
   /* 
     Clicking on a section jumps to the section and
     renders it to top=0. But since the header seciton
     is sticky, it will not be seen -> position the
     section to 11rem
    */
+  scroll-padding-top: 15rem;
 }
 
 * {

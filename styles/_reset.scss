@@ -5,7 +5,7 @@
 
 html {
   font-size: var(--font-size-root-1); // 10px
-  // scroll-behavior: smooth; /* animation for moving between sections */
+  scroll-behavior: smooth; /* animation for moving between sections */
 
   /* 
     Clicking on a section jumps to the section and
@@ -13,7 +13,7 @@ html {
     is sticky, it will not be seen -> position the
     section to 11rem
    */
-  // scroll-padding-top: 11rem;
+  scroll-padding-top: 15rem;
 }
 
 * {
