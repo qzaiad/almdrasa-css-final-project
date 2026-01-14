@@ -31,6 +31,12 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: scale 0.3s;
+
+  &:hover {
+    scale: 1.1;
+  }
+
 }
 
 .get-started__pic-content {
