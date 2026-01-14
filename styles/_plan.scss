@@ -17,12 +17,19 @@
   align-items: center;
   gap: 3rem;
 
-  // &:last-child {   // last child of parent
-    // border-color: var(--color-orange);
-  // }
-
   &:hover {
     border-color: var(--color-orange);
+  }
+
+  &:last-child:hover {   // last child of parent
+    border-color: var(--color-orange);
+
+    .plan__select {
+      color: var(--color-font-white);
+      background-color: var(--color-orange);
+      box-shadow: 2.5rem 1.7rem 5.4rem rgba($color: #F53838, $alpha: 0.35);
+      scale: 1.1;
+    }
   }
 }
 
