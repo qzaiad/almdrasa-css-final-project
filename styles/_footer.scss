@@ -46,6 +46,11 @@
 .footer__socials-img {
   border-radius: 50%;
   box-shadow: 0 1.3rem 1.8rem rgba($color: #111323, $alpha: 0.08);
+  transition: scale 0.3s;
+
+  &:hover {
+    scale: 1.2;
+  }
 }
 
 .footer__right {

@@ -36,6 +36,11 @@
   flex-basis: 40rem;
   // flex-grow: 0;
   scroll-snap-align: end;
+
+  &:hover {
+    border-color: var(--color-orange);
+  }
+
 }
 
 .feedback__person-description {
