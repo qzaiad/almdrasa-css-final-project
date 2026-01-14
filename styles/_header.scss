@@ -14,7 +14,12 @@
 }
 
 .header {
+  padding-top: 2rem;
+  background-color: var(--color-background-body);
   margin-bottom: 10rem; // in project 10.3rem
+  position: sticky;
+  top: 0; // 2rem; // after 2rem starts padding (not good because when scrolling elements will be visible)
+  z-index: 1;
 }
 
 .logo {
