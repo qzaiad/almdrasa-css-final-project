@@ -1,3 +1,5 @@
+@use "./mixins";
+
 .get-started {
   gap: 0;
 }
@@ -10,6 +12,10 @@
 
 .get-started__header {
   margin-bottom: 2rem;
+
+  @include mixins.tablet {
+  margin-bottom: 1rem;
+  }
 }
 
 /*
@@ -33,6 +39,13 @@
   cursor: pointer;
   transition: scale 0.3s;
 
+  @include mixins.tablet {
+    width: 18.75rem;
+    height: 4.5rem;
+    margin-top: 2rem;
+    margin-right: auto;
+  }
+
   &:hover {
     scale: 1.1;
   }
@@ -40,5 +53,10 @@
 }
 
 .get-started__pic-content {
-  scale: 110%;
+  scale: 110%; // this will make oage horizontally scrollable in tablets
+  align-self: center;
+
+  @include mixins.tablet {
+    scale: 1;
+  }
 }
