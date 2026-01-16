@@ -56,7 +56,24 @@
 }
 
 .container {
-  max-width: var(--page-max-width);
+  max-width: calc(var(--page-max-width) + 2 * var(--gutter));
+    /* 
+    padding-inline (logical property) (ONLY LEFT AND RIGHT)
+    - Refers to the inline direction (start ? end of text)
+    - Adapts automatically to:
+      - direction: ltr (left-to-right)
+      - direction: rtl (right-to-left)
+      - different writing modes
+    - Ideal for multilingual and responsive layouts
+
+    padding-inline: 20px; is equivalent to
+    - padding-left + padding-right in LTR
+    - padding-right + padding-left in RTL
+
+    Gutter: is an expression used for distances such as padding & margin
+   */
+  padding-inline: var(--gutter);
+  
   margin: 0rem auto 5rem; // margin-top should be 5rem, but I find it too much -> moved to header
   display: grid;
 }
