@@ -90,6 +90,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   margin-bottom: 10rem; // in project 10.3rem
+
+  @include mixins.tablet {
+  margin-bottom: 3rem; // in project 10.3rem
+  }
 }
 
 .section__header {
