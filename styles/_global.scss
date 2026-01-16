@@ -1,3 +1,5 @@
+@use "./mixins";
+
 .text-default {
   font-size: var(--font-size-16-default);
   font-weight: var(--font-weight-regular-default);
@@ -15,6 +17,11 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-font-black);
   line-height: var(--line-hight-70);
+
+  @include mixins.tablet {
+    font-size: var(--font-size-35);
+    line-height: var(--line-hight-50);
+  }
 }
 
 .heading2 {
@@ -73,7 +80,7 @@
     Gutter: is an expression used for distances such as padding & margin
    */
   padding-inline: var(--gutter);
-  
+
   margin: 0rem auto 5rem; // margin-top should be 5rem, but I find it too much -> moved to header
   display: grid;
 }
