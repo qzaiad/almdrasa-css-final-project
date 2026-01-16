@@ -279,6 +279,7 @@ a:hover {
   color: var(--color-font-white);
   font-weight: var(--font-weight-bold);
   background-color: var(--color-orange);
+  border: 1px solid var(--color-orange);
   border-radius: 10px;
   width: 25rem;
   height: 6rem;
