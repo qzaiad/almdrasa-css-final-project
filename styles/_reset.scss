@@ -1,3 +1,5 @@
+@use "./mixins";
+
 /* 
   The browser uses default values e.g. margin=8px p.padding...
   html selector in video is defined in _global.scss. I'd leave it here
@@ -52,4 +54,9 @@ body{
   background-color: var(--color-background-body);
   color: var(--color-font-grey);
   border: none;
+}
+
+img {
+  max-width: 100%;  // relative to parent element
+  height: auto;     // keeps aspect ratio
 }
