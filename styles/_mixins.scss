@@ -1,9 +1,18 @@
-@mixin flex($align-items: center, $justify-content: space-between) {
-  display: flex;
-  align-items: $align-items;
-  justify-content: $justify-content;
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content; // otherwise Error: Mixin doesn't accept a content block.
+  }
 }
 
-@mixin flex_center_space_between() {
-  @include flex($align-items: center, $justify-content: space-between);
+@mixin tablet {
+  @media (min-width: 600px) and (max-width: 900px) {
+    @content; // otherwise Error: Mixin doesn't accept a content block.
+  }
 }
+
+@mixin mobile-tablet {
+  @media (max-width: 900px) {
+    @content; // otherwise Error: Mixin doesn't accept a content block.
+  }
+}
+
