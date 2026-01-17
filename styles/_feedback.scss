@@ -1,5 +1,10 @@
+@use "./mixins";
+
 .feedback {
   // border: 1px solid blue;
+  @include mixins.tablet {
+    margin-top: 2rem
+  }
 }
 
 .feedback__scroll {
@@ -9,6 +14,8 @@
 .feedback__wrapper {
   display: flex;
   overflow-x: auto; // overflowing x should scroll
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / old Edge */
   /*
     x:
     - Snapping happens on the horizontal axis
@@ -23,6 +30,10 @@
   scroll-snap-type: x mandatory;
   flex-wrap: nowrap;  // ensure the boxes stay in one long line
   gap: 5rem;
+
+  @include mixins.tablet {
+    gap: 3rem
+  }
 }
 
 .feedback__rating-box {
@@ -70,6 +81,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include mixins.tablet {
+    margin: 0rem
+  }
 }
 
 .feedback__scroll-state {

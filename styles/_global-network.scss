@@ -1,13 +1,27 @@
+@use "./mixins";
+
 .global-network {
   grid-template-columns: 1fr;
-}
 
-.global-network__header {
-  margin-bottom: 15.5rem;
-}
+  &__header {
+    margin-bottom: 15.5rem;
 
-.global-network__companies {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    @include mixins.tablet {
+    margin-bottom: 1rem;
+  }
+  }
+
+  &__companies {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  @include mixins.tablet {
+    gap: 1rem;
+    justify-content: center;
+
+    //grid-template-columns: repeat(auto-fit, 190px); // create as many 190px-wide columns as will fit
+ }
+  }
 }

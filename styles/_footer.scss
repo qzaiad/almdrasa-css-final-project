@@ -1,3 +1,5 @@
+@use "./mixins";
+
 .footer {
   // border: 1px solid red;
   margin-top: -12.5rem; // -11.6rem;
@@ -23,6 +25,7 @@
   justify-content: space-between;
   // margin-top: 6.6rem;
   padding-top: calc(6.6rem + 12.5rem);
+  gap: 2rem;
 }
 
 .footer__left {
@@ -56,6 +59,10 @@
 .footer__right {
   display: flex;
   gap: 12.6rem;
+
+  @include mixins.tablet {
+  gap: 6rem;
+  }
 }
 
 .footer__column {

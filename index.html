@@ -22,11 +22,40 @@
       </div>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#about">About</a></li>
-          <li class="nav__item"><a href="#features">Features</a></li>
-          <li class="nav__item"><a href="#pricing">Pricing</a></li>
-          <li class="nav__item"><a href="#testimonials">Testimonials</a></li>
-          <li class="nav__item"><a href="#help">Help</a></li>
+          <li class="nav__item">
+            <a class="nav__item-link" href="#about">
+              <svg class="nav__item-img" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>            
+              About
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link" href="#features">
+              <svg class="nav__item-img" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+              Features
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link" href="#pricing">
+            <svg class="nav__item-img" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Pricing
+          </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link" href="#testimonials">
+              <svg class="nav__item-img" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+              Testimonials
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item-link" href="#help">
+              <div class="nav__item-img qmark">
+                <strong>
+                ?
+                </strong>
+              </div>
+              Help
+            </a>
+          </li>
         </ul>
       </nav>
       <div class="container_sign">
@@ -51,7 +80,6 @@
         <img src="./images/illustration1.svg" alt="Get started image">
       </div>
     </section>
-
     <section class="section statistics">
       <div class="statistics__column statistics__users">
         <img src="./images/icons/user.svg" alt="statistics users image" class="statistics_img">
@@ -76,17 +104,14 @@
       </div>
     </section>
 
-
     <section class="section features" id="features">
       <div class="features__pic-content">
         <img src="./images/illustration2.svg" alt="Get started image">
       </div>
       <div class="features__data">
-        <!-- <div class="features__header"> -->
         <h2 class="heading2">
           We Provide Many <br> Features You Can Use
         </h2>
-        <!-- </div> -->
         <p class="text-default">
           You can explore the features that we provide with fun and have their own functions each feature.
         </p>
@@ -106,22 +131,27 @@
           Let's choose the package that is best for you and explore it happily and <br> cheerfully.
         </p>
       </div>
-      <!-- <div class="plan__boxes"> -->
       <div class="plan__box">
-        <img class="plan__free-img" src="./images/illustration/free.svg" alt="">
-        <h5 class=".heading5">Free Plan</h5>
+        <div class="plan__box-header">
+          <img class="plan__free-img" src="./images/illustration/free.svg" alt="">
+          <h5 class=".heading5">Free Plan</h5>
+        </div>
         <ul class="plan__list vlist">
           <li class="plan__item vitem">Unlimited Bandwidth</li>
           <li class="plan__item vitem">Encrypted Connection</li>
           <li class="plan__item vitem">No Traffic Logs</li>
           <li class="plan__item vitem">Works on All Devices</li>
         </ul>
-        <h2 class="heading3 plan__price">Free</h2>
-        <div class="plan__select">Select</div>
+        <div class="plan__box-footer">
+          <h2 class="heading3 plan__price">Free</h2>
+          <div class="plan__select">Select</div>
+        </div>
       </div>
       <div class="plan__box">
-        <img class="plan__free-img" src="./images/illustration/free.svg" alt="">
-        <h5 class=".heading5">Standard Plan</h5>
+        <div class="plan__box-header">
+          <img class="plan__free-img" src="./images/illustration/free.svg" alt="">
+          <h5 class=".heading5">Standard Plan</h5>
+        </div>
         <ul class="plan__list vlist">
           <li class="plan__item vitem">Unlimited Bandwidth</li>
           <li class="plan__item vitem">Encrypted Connection</li>
@@ -129,12 +159,16 @@
           <li class="plan__item vitem">Works on All Devices</li>
           <li class="plan__item vitem">Connect Anyware</li>
         </ul>
-        <h2 class="heading3 plan__price">9$ / <span class="plan__month">mo</span></h2>
-        <div class="plan__select">Select</div>
+        <div class="plan__box-footer">
+          <h2 class="heading3 plan__price">9$ / <span class="plan__month">mo</span></h2>
+          <div class="plan__select">Select</div>
+        </div>
       </div>
       <div class="plan__box">
-        <img class="plan__free-img" src="./images/illustration/free.svg" alt="">
-        <h5 class=".heading5">Premium Plan</h5>
+        <div class="plan__box-header">
+          <img class="plan__free-img" src="./images/illustration/free.svg" alt="">
+          <h5 class=".heading5">Premium Plan</h5>
+        </div>
         <ul class="plan__list vlist">
           <li class="plan__item vitem">Unlimited Bandwidth</li>
           <li class="plan__item vitem">Encrypted Connection</li>
@@ -143,10 +177,11 @@
           <li class="plan__item vitem">Connect Anyware</li>
           <li class="plan__item vitem">Get New Features</li>
         </ul>
-        <h2 class="heading3 plan__price">12$ / <span class="plan__month">mo</span></h2>
-        <div class="plan__select plan__select-last">Select</div>
+        <div class="plan__box-footer">
+          <h2 class="heading3 plan__price">12$ / <span class="plan__month">mo</span></h2>
+          <div class="plan__select plan__select-last">Select</div>
+        </div>
       </div>
-      <!-- </div> -->
     </section>
 
     <section class="section global-network">
@@ -165,9 +200,7 @@
           <img class="global-network__company-img" src="./images/discord.png" alt="Discord image">
           <img class="global-network__company-img" src="./images/spotify.png" alt="Spotify image">
         </div>
-
       </div>
-
     </section>
 
     <section class="section feedback" id="testimonials">
@@ -177,7 +210,7 @@
           this crazy feature.
         </p>
       </div>
-      <div class="feedback__scroll"> <!-- Opinions -->
+      <div class="feedback__scroll">
         <div class="feedback__wrapper">
           <div class="feedback__rating-box">
             <div class="feedback__person-rating">
@@ -189,7 +222,6 @@
                 </div>
                 <div class="feedback__rating">
                   <span class="text-default">4.5</span>
-                  <span class="feedback__star">⭐</span> <!--shortcut WIN+. -->
                 </div>
               </div>
             </div>
@@ -208,7 +240,6 @@
                 </div>
                 <div class="feedback__rating">
                   <span class="text-default">4.5</span>
-                  <span class="feedback__star">⭐</span> <!--shortcut WIN+. -->
                 </div>
               </div>
             </div>
@@ -226,7 +257,6 @@
                 </div>
                 <div class="feedback__rating">
                   <span class="text-default">4.5</span>
-                  <span class="feedback__star">⭐</span> <!--shortcut WIN+. -->
                 </div>
               </div>
             </div>
@@ -245,7 +275,6 @@
                 </div>
                 <div class="feedback__rating">
                   <span class="text-default">4.5</span>
-                  <span class="feedback__star">⭐</span> <!--shortcut WIN+. -->
                 </div>
               </div>
             </div>
@@ -344,6 +373,7 @@
         </div>
       </div>
     </footer>
+    
   </div>
 </body>
 

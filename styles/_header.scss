@@ -1,3 +1,5 @@
+@use "./mixins";
+
 /*
   - header has 3 elements: .logo .nav .container_sign -> header flex
    - .logo is left aligned
@@ -8,18 +10,27 @@
   - vertically center all elements -> align-items:center
  */
 
-.header, .logo, .nav__list, .container_sign {
+.logo, .nav__list, .container_sign {
   display: flex;
   align-items: center
 }
 
 .header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
   padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: var(--color-background-body);
-  margin-bottom: 10rem; // in project 10.3rem
+  margin-bottom: 8rem; // in project 10.3rem
   position: sticky;
   top: 0; // 2rem; // after 2rem starts padding (not good because when scrolling elements will be visible)
   z-index: 1;
+
+  @include mixins.tablet {
+    grid-template-columns: auto auto;
+    margin-bottom: 5rem; // in project 10.3rem
+  }
 }
 
 .logo {
@@ -32,16 +43,79 @@
 }
 
 .nav {
-  flex: 1;  // takes all remaining space between logo and sign
+  // flex: 1;  // takes all remaining space between logo and sign
+  @include mixins.tablet {
+    order: 1;
+    grid-column: 1/-1;
+    justify-content: center;
+    // display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // height: 4rem;
+    // background-color: red;
+    // width: 100hw;
+    // height: auto;
+    justify-content: center;
+
+    display: flex;
+    align-items: center;
+  }
 }
 
 .nav__list {
+
   justify-content: center;  // center nav items in that space
   gap: 2rem;
+  width: 100%;
+  background-color: var(--color-background-body);
+
+  @include mixins.tablet {
+    justify-content: space-between;
+    gap: 4rem;
+    font-size: var(--font-size-16-default);
+  }
+}
+
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+
+  @include mixins.tablet {
+    font-size: var(--font-size-12);
+  }
+  &-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &-img {
+    font-size: var(--font-size-20);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: none;
+
+    @include mixins.tablet {
+      display: inline-block;
+    }
+  }
 }
 
 .container_sign {
   gap: 3rem;
+
+  @include mixins.tablet {
+    // gap: 1.5rem;
+    justify-self: right;
+  }
 }
 
 .sign-in {
@@ -68,4 +142,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @include mixins.tablet {
+    width: 11.25rem;
+    height: 3.375rem;
+    border-radius: px;
+  }
 }

@@ -1,3 +1,9 @@
+@use "./mixins";
+
+.features__pic-content{
+  display: flex;
+  align-items: center;
+}
 
 .features__data {
   display: flex;
@@ -7,6 +13,10 @@
 
 .features__list {
   gap: 1.5rem;
+
+  @include mixins.tablet {
+    gap: 0.5rem;
+  }
 }
 
 .features__item:before {

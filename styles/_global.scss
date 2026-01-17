@@ -29,6 +29,11 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-font-black);
   line-height: var(--line-hight-50);
+
+  @include mixins.tablet {
+    font-size: var(--font-size-25);
+    line-height: var(--line-hight-50);
+  }
 }
 
 .heading3 {
@@ -92,7 +97,7 @@
   margin-bottom: 10rem; // in project 10.3rem
 
   @include mixins.tablet {
-  margin-bottom: 3rem; // in project 10.3rem
+    margin-bottom: 3rem; // in project 10.3rem
   }
 }
 

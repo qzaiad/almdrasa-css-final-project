@@ -1,6 +1,13 @@
+@use "./mixins";
+
 .plan {
   grid-template-columns: repeat(3, 1fr);
   margin-top: 10rem;
+
+  @include mixins.tablet {
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+ }
 }
 
 .plan__paragraph {
@@ -15,7 +22,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 3rem;
+  text-wrap: nowrap;
+
+  &-header, &-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+  @include mixins.tablet {
+    flex-direction: row;
+    padding: 3rem 2rem;
+    gap: 3rem;
+ }
 
   &:hover {
     border-color: var(--color-orange);
