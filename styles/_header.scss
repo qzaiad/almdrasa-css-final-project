@@ -92,6 +92,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &-img {
@@ -107,6 +111,10 @@
       display: inline-block;
     }
   }
+}
+
+.qmark {
+  user-select: none;
 }
 
 .container_sign {

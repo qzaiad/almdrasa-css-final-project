@@ -324,6 +324,9 @@ a:hover {
   align-items: center;
   text-align: center;
 }
+.nav__item-link:hover {
+  text-decoration: none;
+}
 .nav__item-img {
   font-size: var(--font-size-20);
   display: flex;
@@ -337,6 +340,12 @@ a:hover {
   .nav__item-img {
     display: inline-block;
   }
+}
+
+.qmark {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .container_sign {
