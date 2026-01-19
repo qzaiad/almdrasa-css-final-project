@@ -2,13 +2,17 @@
 
 .feedback {
   // border: 1px solid blue;
-  @include mixins.tablet {
-    margin-top: 2rem
+  @include mixins.mobile-tablet {
+    margin-top: 2rem;
   }
 }
 
 .feedback__scroll {
   grid-column: 1/-1;
+  
+  @include mixins.mobile {
+    max-width: calc(100vw - 2 * var(--gutter) - 0px);
+  }
 }
 
 .feedback__wrapper {
@@ -31,7 +35,7 @@
   flex-wrap: nowrap;  // ensure the boxes stay in one long line
   gap: 5rem;
 
-  @include mixins.tablet {
+  @include mixins.mobile-tablet {
     gap: 3rem
   }
 }
@@ -82,7 +86,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @include mixins.tablet {
+  @include mixins.mobile-tablet {
     margin: 0rem
   }
 }

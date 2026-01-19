@@ -127,6 +127,13 @@ img {
     line-height: var(--line-hight-50);
   }
 }
+@media (max-width: 600px) {
+  .heading1 {
+    font-size: var(--font-size-30);
+    line-height: var(--line-hight-50);
+    text-align: center;
+  }
+}
 
 .heading2 {
   font-size: var(--font-size-35);
@@ -145,6 +152,11 @@ img {
   font-size: var(--font-size-25);
   font-weight: var(--font-weight-medium);
   color: var(--color-font-black);
+}
+@media (max-width: 600px) {
+  .heading3, .heading3-bold {
+    font-size: var(--font-size-18);
+  }
 }
 
 .heading3-bold {
@@ -194,6 +206,7 @@ img {
 }
 
 .section {
+  max-width: calc(100vw - 2 * var(--gutter));
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
@@ -201,7 +214,13 @@ img {
 }
 @media (min-width: 600px) and (max-width: 900px) {
   .section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 4rem;
   }
 }
 
@@ -262,23 +281,35 @@ a:hover {
   top: 0;
   z-index: 1;
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .header {
     grid-template-columns: auto auto;
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
+    font-size: var(--font-size-14);
   }
 }
 
 .logo {
   gap: 1rem;
 }
+@media (max-width: 600px) {
+  .logo {
+    margin-right: 1rem;
+  }
+}
 
 .logo__img {
   max-width: 3.5rem;
   max-height: 3.623rem;
 }
+@media (max-width: 900px) {
+  .logo__img {
+    max-width: 2.5rem;
+    max-height: 2.623rem;
+  }
+}
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .nav {
     order: 1;
     grid-column: 1/-1;
@@ -299,11 +330,10 @@ a:hover {
   width: 100%;
   background-color: var(--color-background-body);
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .nav__list {
     justify-content: space-between;
-    gap: 4rem;
-    font-size: var(--font-size-16-default);
+    gap: 0rem;
   }
 }
 
@@ -313,9 +343,14 @@ a:hover {
   align-items: center;
   padding: 0.8rem 1.6rem;
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .nav__item {
     font-size: var(--font-size-12);
+  }
+}
+@media (max-width: 600px) {
+  .nav__item {
+    padding: 0.8rem 0.8rem;
   }
 }
 .nav__item-link {
@@ -336,7 +371,7 @@ a:hover {
   height: 2.4rem;
   display: none;
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .nav__item-img {
     display: inline-block;
   }
@@ -351,8 +386,14 @@ a:hover {
 .container_sign {
   gap: 3rem;
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .container_sign {
+    justify-self: right;
+  }
+}
+@media (max-width: 900px) {
+  .container_sign {
+    gap: 1.5rem;
     justify-self: right;
   }
 }
@@ -361,13 +402,14 @@ a:hover {
   color: var(--color-font-black);
   font-weight: var(--font-weight-medium);
   cursor: pointer;
+  text-wrap: nowrap;
 }
 
 .sign-up {
   color: var(--color-orange-sign-up);
   font-weight: var(--font-weight-medium);
   border: 1px solid var(--color-orange-sign-up);
-  border-radius: 50px;
+  border-radius: 5rem;
   /*
     font size 16px the height of the text in design is 19px. But in my browser it is 30px.
     Therefore I have to reduce the padding in order for the heighe including padding be 45px as in design
@@ -383,17 +425,34 @@ a:hover {
   .sign-up {
     width: 11.25rem;
     height: 3.375rem;
-    border-radius: px;
+    border-radius: 3.75rem;
+  }
+}
+@media (max-width: 600px) {
+  .sign-up {
+    width: 9rem;
+    height: 3rem;
+    border-radius: 3rem;
   }
 }
 
 .get-started {
   gap: 0;
 }
+@media (max-width: 600px) {
+  .get-started {
+    text-align: center;
+  }
+}
 
 .get-started__data {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 600px) {
+  .get-started__data {
+    align-items: center;
+  }
 }
 
 .get-started__header {
@@ -426,10 +485,13 @@ a:hover {
 }
 @media (min-width: 600px) and (max-width: 900px) {
   .get-started__button {
+    margin-right: auto;
+  }
+}
+@media (max-width: 900px) {
+  .get-started__button {
     width: 18.75rem;
     height: 4.5rem;
-    margin-top: 2rem;
-    margin-right: auto;
   }
 }
 .get-started__button:hover {
@@ -445,6 +507,12 @@ a:hover {
     scale: 1;
   }
 }
+@media (max-width: 600px) {
+  .get-started__pic-content {
+    scale: 1;
+    order: -1;
+  }
+}
 
 .statistics {
   grid-template-columns: repeat(3, 1fr);
@@ -457,6 +525,14 @@ a:hover {
     gap: 2rem;
   }
 }
+@media (max-width: 600px) {
+  .statistics {
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    border: 2px solid var(--color-border-light-grey);
+  }
+}
 
 .statistics__column {
   display: flex;
@@ -464,6 +540,12 @@ a:hover {
   justify-content: center;
   gap: 3.6rem;
   height: 12.55rem;
+}
+@media (max-width: 600px) {
+  .statistics__column {
+    height: 8rem;
+    gap: 5rem;
+  }
 }
 
 .statistics_img {
@@ -477,12 +559,26 @@ a:hover {
   align-items: left;
   gap: 0.5rem;
 }
+@media (max-width: 600px) {
+  .statistics__data {
+    width: 7.5rem;
+  }
+}
 
 .statistics__locations {
   padding-left: 5rem;
   padding-right: 5rem;
   border-left: 2px solid var(--color-border-light-grey);
   border-right: 2px solid var(--color-border-light-grey);
+}
+@media (max-width: 600px) {
+  .statistics__locations {
+    padding: 5rem 0;
+    border-top: 2px solid var(--color-border-light-grey);
+    border-bottom: 2px solid var(--color-border-light-grey);
+    border-left: none;
+    border-right: none;
+  }
 }
 
 .features__pic-content {
@@ -499,7 +595,7 @@ a:hover {
 .features__list {
   gap: 1.5rem;
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .features__list {
     gap: 0.5rem;
   }
@@ -517,10 +613,16 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   margin-top: 10rem;
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .plan {
     gap: 2rem;
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .plan {
+    margin-top: 2rem;
   }
 }
 
@@ -553,6 +655,16 @@ a:hover {
     gap: 3rem;
   }
 }
+@media (max-width: 600px) {
+  .plan__box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 2rem;
+    padding: 0;
+    gap: 3rem;
+  }
+}
 .plan__box:hover {
   border-color: var(--color-orange);
 }
@@ -568,6 +680,12 @@ a:hover {
 
 .plan__list {
   gap: 1rem;
+}
+@media (max-width: 600px) {
+  .plan__list {
+    order: 2;
+    padding-bottom: 2rem;
+  }
 }
 
 .plan__item::before {
@@ -602,6 +720,12 @@ a:hover {
   justify-content: center;
   transition: scale 0.3s;
 }
+@media (max-width: 600px) {
+  .plan__select {
+    width: 10.8rem;
+    height: 4.5rem;
+  }
+}
 .plan__select:hover {
   color: var(--color-font-white);
   background-color: var(--color-orange);
@@ -612,10 +736,20 @@ a:hover {
 .global-network {
   grid-template-columns: 1fr;
 }
+@media (min-width: 600px) and (max-width: 900px) {
+  .global-network {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .global-network {
+    margin-top: 2rem;
+  }
+}
 .global-network__header {
   margin-bottom: 15.5rem;
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .global-network__header {
     margin-bottom: 1rem;
   }
@@ -630,10 +764,24 @@ a:hover {
   .global-network__companies {
     gap: 1rem;
     justify-content: center;
+    grid-template-columns: repeat(auto-fit, 190px);
+  }
+}
+@media (max-width: 600px) {
+  .global-network__companies {
+    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 190px);
+  }
+}
+@media (max-width: 600px) {
+  .global-network__company-img {
+    max-width: 16rem;
+    max-height: 5.1rem;
   }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .feedback {
     margin-top: 2rem;
   }
@@ -641,6 +789,11 @@ a:hover {
 
 .feedback__scroll {
   grid-column: 1/-1;
+}
+@media (max-width: 600px) {
+  .feedback__scroll {
+    max-width: calc(100vw - 2 * var(--gutter) - 0px);
+  }
 }
 
 .feedback__wrapper {
@@ -663,7 +816,7 @@ a:hover {
   flex-wrap: nowrap;
   gap: 5rem;
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .feedback__wrapper {
     gap: 3rem;
   }
@@ -711,7 +864,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .feedback__scroll-bar {
     margin: 0rem;
   }
@@ -758,16 +911,22 @@ a:hover {
 }
 
 .subscribe {
+  grid-template-columns: auto auto;
   padding: 6rem 7rem;
   margin-top: -6rem;
   margin-bottom: 0;
   background-color: var(--color-background-body);
   box-shadow: 3.1rem 1.6rem 11.4rem rgba(13, 16, 37, 0.06);
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .subscribe {
     margin: 0rem;
     padding: 0rem;
+  }
+}
+@media (max-width: 600px) {
+  .subscribe {
+    gap: 2rem;
   }
 }
 
@@ -792,6 +951,12 @@ a:hover {
   box-shadow: 2rem 2.6rem 5.4rem rgba(245, 56, 56, 0.35);
   transition: scale 0.3s;
 }
+@media (max-width: 900px) {
+  .subscribe__now {
+    width: 15rem;
+    height: 4rem;
+  }
+}
 .subscribe__now:hover {
   scale: 1.1;
 }
@@ -805,7 +970,42 @@ a:hover {
 .footer:before {
   content: "";
   position: absolute;
-  width: 100vw;
+  /*
+    The viewport is the visible area of the browser window including the space taken by the vertical scrollbar.
+    - Page content width = viewport minus scrollbar
+    -> Horizontal overflow appears
+    -> 100vw is wider than the content area.
+
+    ? Modern fix (CSS Values Level 4)
+    width: 100dvw;
+    dvw = dynamic viewport width
+
+    Excludes scrollbar
+    Adjusts to UI changes (mobile address bar)
+    ? Hacky workaround (avoid if possible)
+    width: calc(100vw - 17px);
+
+    Scrollbar width varies ? unreliable.  
+    ---------------------------------------------------
+    on Chrome on Linux the scrollbar is a classic (non-overlay) scrollbar that takes up layout space, and vw explicitly includes that space.
+
+    Let?s go step by step.
+
+    What Chrome on Linux is doing
+    1. On Linux, scrollbars usually consume layout width
+
+    Unlike macOS (overlay scrollbars), Linux typically uses classic scrollbars:
+
+    | content | scrollbar |
+
+
+    That scrollbar is usually ~15?17px wide (theme-dependent).    ---------------------------------------------------
+
+    My first solution:
+      max-width: calc(100vw - 2 * var(--gutter) - 0px);
+      width: 100vw;
+   */
+  width: calc(100vw - 2 * var(--gutter) - 0px);
   height: 100vh;
   background-color: #F8F8F8;
   justify-self: center;
@@ -819,12 +1019,23 @@ a:hover {
   padding-top: 19.1rem;
   gap: 2rem;
 }
+@media (max-width: 600px) {
+  .footer__content {
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
 
 .footer__left {
   max-width: 34rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+@media (max-width: 600px) {
+  .footer__left {
+    gap: 2rem;
+  }
 }
 
 .footer__description {
@@ -856,6 +1067,11 @@ a:hover {
     gap: 6rem;
   }
 }
+@media (max-width: 600px) {
+  .footer__right {
+    gap: 3rem;
+  }
+}
 
 .footer__column {
   display: flex;
@@ -868,4 +1084,9 @@ a:hover {
   flex-direction: column;
   gap: 1rem;
   white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .footer__column-list {
+    white-space: wrap;
+  }
 }/*# sourceMappingURL=style.css.map */

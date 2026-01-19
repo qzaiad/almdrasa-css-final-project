@@ -22,6 +22,12 @@
     font-size: var(--font-size-35);
     line-height: var(--line-hight-50);
   }
+
+  @include mixins.mobile {
+    font-size: var(--font-size-30);
+    line-height: var(--line-hight-50);
+    text-align: center;
+  }
 }
 
 .heading2 {
@@ -40,6 +46,10 @@
   font-size: var(--font-size-25);
   font-weight: var(--font-weight-medium);
   color: var(--color-font-black);
+
+  @include mixins.mobile {
+    font-size: var(--font-size-18);
+  }
 }
 
 .heading3-bold {
@@ -91,13 +101,19 @@
 }
 
 .section {
+  max-width: calc(100vw - 2 * var(--gutter));
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   margin-bottom: 10rem; // in project 10.3rem
 
   @include mixins.tablet {
-    margin-bottom: 3rem; // in project 10.3rem
+    margin-bottom: 4rem; // in project 10.3rem
+  }
+
+  @include mixins.mobile {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 4rem;
   }
 }
 

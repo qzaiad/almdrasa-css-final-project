@@ -14,7 +14,7 @@
 .features__list {
   gap: 1.5rem;
 
-  @include mixins.tablet {
+  @include mixins.mobile-tablet {
     gap: 0.5rem;
   }
 }

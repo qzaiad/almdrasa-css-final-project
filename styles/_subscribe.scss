@@ -2,15 +2,20 @@
 
 .subscribe {
   // border: 1px solid red;
+  grid-template-columns: auto auto;  // in global only 1fr for mobile devices -> overwrite it here
   padding: 6rem 7rem;
   margin-top: -6rem;
   margin-bottom: 0;
   background-color: var(--color-background-body);
   box-shadow: 3.1rem 1.6rem 11.4rem rgba($color: #0D1025, $alpha: 0.06);
 
-  @include mixins.tablet {
+  @include mixins.mobile-tablet {
     margin: 0rem;
     padding: 0rem;
+  }
+
+  @include mixins.mobile {
+    gap: 2rem;
   }
 }
 
@@ -35,6 +40,11 @@
   z-index: 0;
   box-shadow: 2rem 2.6rem 5.4rem rgba($color: #F53838, $alpha: 0.35);
   transition: scale 0.3s;
+
+  @include mixins.mobile-tablet {
+    width: 15rem;
+    height: 4rem;
+  }
 
   &:hover {
     scale: 1.1;

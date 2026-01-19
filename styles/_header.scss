@@ -27,24 +27,34 @@
   top: 0; // 2rem; // after 2rem starts padding (not good because when scrolling elements will be visible)
   z-index: 1;
 
-  @include mixins.tablet {
+  @include mixins.mobile-tablet {
     grid-template-columns: auto auto;
-    margin-bottom: 5rem; // in project 10.3rem
+    margin-bottom: 2.5rem; // in project 10.3rem
+    font-size: var(--font-size-14);
   }
 }
 
 .logo {
   gap: 1rem;
+
+  @include mixins.mobile {
+    margin-right: 1rem;
+  } 
 }
 
 .logo__img {
   max-width: 3.5rem;
   max-height: 3.623rem;
+
+  @include mixins.mobile-tablet {
+  max-width: 2.5rem;
+  max-height: 2.623rem;
+  }
 }
 
 .nav {
   // flex: 1;  // takes all remaining space between logo and sign
-  @include mixins.tablet {
+  @include mixins.mobile-tablet {
     order: 1;
     grid-column: 1/-1;
     justify-content: center;
@@ -71,10 +81,9 @@
   width: 100%;
   background-color: var(--color-background-body);
 
-  @include mixins.tablet {
+  @include mixins.mobile-tablet {
     justify-content: space-between;
-    gap: 4rem;
-    font-size: var(--font-size-16-default);
+    gap: 0rem;
   }
 }
 
@@ -84,9 +93,14 @@
   align-items: center;
   padding: 0.8rem 1.6rem;
 
-  @include mixins.tablet {
+  @include mixins.mobile-tablet {
     font-size: var(--font-size-12);
   }
+
+  @include mixins.mobile {
+    padding: 0.8rem 0.8rem;
+  }
+
   &-link {
     display: flex;
     flex-direction: column;
@@ -107,7 +121,7 @@
     height: 2.4rem;
     display: none;
 
-    @include mixins.tablet {
+    @include mixins.mobile-tablet {
       display: inline-block;
     }
   }
@@ -120,8 +134,13 @@
 .container_sign {
   gap: 3rem;
 
-  @include mixins.tablet {
+  @include mixins.mobile-tablet {
     // gap: 1.5rem;
+    justify-self: right;
+  }
+
+  @include mixins.mobile-tablet {
+    gap: 1.5rem;
     justify-self: right;
   }
 }
@@ -130,13 +149,14 @@
   color: var(--color-font-black);
   font-weight: var(--font-weight-medium);
   cursor: pointer;
+  text-wrap: nowrap;
 }
 
 .sign-up {
   color: var(--color-orange-sign-up);
   font-weight: var(--font-weight-medium);
   border: 1px solid var(--color-orange-sign-up);
-  border-radius: 50px;
+  border-radius: 5rem;
   /*
     font size 16px the height of the text in design is 19px. But in my browser it is 30px.
     Therefore I have to reduce the padding in order for the heighe including padding be 45px as in design
@@ -154,6 +174,12 @@
   @include mixins.tablet {
     width: 11.25rem;
     height: 3.375rem;
-    border-radius: px;
+    border-radius:3.75rem;
+  }
+
+  @include mixins.mobile {
+    width: 9rem;
+    height: 3rem;
+    border-radius: 3rem;
   }
 }

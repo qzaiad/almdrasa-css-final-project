@@ -3,12 +3,20 @@
 .global-network {
   grid-template-columns: 1fr;
 
+  @include mixins.tablet {
+    margin-top: 4rem;
+  }
+
+  @include mixins.mobile {
+    margin-top: 2rem;
+  }
+
   &__header {
     margin-bottom: 15.5rem;
 
-    @include mixins.tablet {
-    margin-bottom: 1rem;
-  }
+    @include mixins.mobile-tablet {
+      margin-bottom: 1rem;
+    }
   }
 
   &__companies {
@@ -17,11 +25,26 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-  @include mixins.tablet {
-    gap: 1rem;
-    justify-content: center;
+    @include mixins.tablet {
+      gap: 1rem;
+      justify-content: center;
 
-    //grid-template-columns: repeat(auto-fit, 190px); // create as many 190px-wide columns as will fit
- }
+      grid-template-columns: repeat(auto-fit, 190px); // create as many 190px-wide columns as will fit
+    }
+
+    @include mixins.mobile {
+      gap: 1rem;
+      justify-content: center;
+
+      grid-template-columns: repeat(auto-fit, 190px); // create as many 190px-wide columns as will fit
+    }
+  }
+
+  &__company-img {
+    @include mixins.mobile {
+      max-width: 16rem;
+      max-height: 5.1rem;
+    }
+
   }
 }

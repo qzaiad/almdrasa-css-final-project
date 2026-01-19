@@ -10,6 +10,13 @@
   @include mixins.tablet {
     gap: 2rem;
  }
+
+  @include mixins.mobile {
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    border: 2px solid var(--color-border-light-grey);
+ }
 }
 
 .statistics__column {
@@ -18,6 +25,11 @@
   justify-content: center;
   gap: 3.6rem;
   height: 12.55rem;
+
+  @include mixins.mobile {
+    height: 8rem;
+    gap: 5rem;
+  }
 }
 
 .statistics_img {
@@ -30,6 +42,10 @@
   flex-direction: column;
   align-items: left;
   gap: 0.5rem;
+
+  @include mixins.mobile {
+    width: 7.5rem;
+  }
 }
 
 .statistics__locations {
@@ -37,4 +53,12 @@
   padding-right: 5rem;
   border-left: 2px solid var(--color-border-light-grey);
   border-right: 2px solid var(--color-border-light-grey);
+
+  @include mixins.mobile {
+    padding: 5rem 0;
+    border-top: 2px solid var(--color-border-light-grey);
+    border-bottom: 2px solid var(--color-border-light-grey);
+    border-left: none;
+    border-right: none;
+}
 }
