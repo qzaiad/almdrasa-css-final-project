@@ -15,7 +15,7 @@
   }
 
   @include mixins.mobile {
-    gap: 2rem;
+    gap: 0rem;
   }
 }
 
@@ -44,6 +44,10 @@
   @include mixins.mobile-tablet {
     width: 15rem;
     height: 4rem;
+  }
+
+  @include mixins.mobile {
+    margin-right: 1rem;
   }
 
   &:hover {

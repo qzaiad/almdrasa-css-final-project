@@ -926,7 +926,7 @@ a:hover {
 }
 @media (max-width: 600px) {
   .subscribe {
-    gap: 2rem;
+    gap: 0rem;
   }
 }
 
@@ -955,6 +955,11 @@ a:hover {
   .subscribe__now {
     width: 15rem;
     height: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .subscribe__now {
+    margin-right: 1rem;
   }
 }
 .subscribe__now:hover {
