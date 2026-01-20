@@ -32,6 +32,10 @@
     margin-bottom: 2.5rem; // in project 10.3rem
     font-size: var(--font-size-14);
   }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-font-black);
+   }
 }
 
 .logo {
@@ -85,6 +89,10 @@
     justify-content: space-between;
     gap: 0rem;
   }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-font-black);
+   }
 }
 
 .nav__item {

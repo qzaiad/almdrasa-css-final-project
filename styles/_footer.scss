@@ -53,6 +53,10 @@
   background-color: #F8F8F8;
   justify-self: center;
   z-index: -2;
+  
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-font-black);
+   }
 }
 
 .footer__content {

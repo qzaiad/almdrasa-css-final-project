@@ -3,19 +3,19 @@
 .text-default {
   font-size: var(--font-size-16-default);
   font-weight: var(--font-weight-regular-default);
-  color: var(--color-font-grey);
+  @include mixins.text-color-default();
 }
 
 .text-default-wt-medium {
   font-size: var(--font-size-16-default);
   font-weight: var(--font-weight-medium);
-  color: var(--color-font-grey);
+  @include mixins.text-color-default();
 }
 
 .heading1 {
   font-size: var(--font-size-50);
   font-weight: var(--font-weight-medium);
-  color: var(--color-font-black);
+  @include mixins.text-color-default($light-color: var(--color-font-black));
   line-height: var(--line-hight-70);
 
   @include mixins.tablet {
@@ -33,7 +33,7 @@
 .heading2 {
   font-size: var(--font-size-35);
   font-weight: var(--font-weight-medium);
-  color: var(--color-font-black);
+  @include mixins.text-color-default($light-color: var(--color-font-black));
   line-height: var(--line-hight-50);
 
   @include mixins.tablet {
@@ -45,7 +45,7 @@
 .heading3 {
   font-size: var(--font-size-25);
   font-weight: var(--font-weight-medium);
-  color: var(--color-font-black);
+  @include mixins.text-color-default($light-color: var(--color-font-black));
 
   @include mixins.mobile {
     font-size: var(--font-size-18);
@@ -60,13 +60,13 @@
 .heading4 {
   font-size: var(--font-size-20);
   font-weight: var(--font-weight-medium);
-  color: var(--color-font-black);
+  @include mixins.text-color-default($light-color: var(--color-font-black));
 }
 
 .heading5 {
   font-size: var(--font-size-18);
   font-weight: var(--font-weight-medium);
-  color: var(--color-font-black);
+  @include mixins.text-color-default($light-color: var(--color-font-black));
 }
 
 .strong-medium {

@@ -16,3 +16,11 @@
   }
 }
 
+@mixin text-color-default($light-color: var(--color-font-grey), $dark-color: var(--color-font-white)) {
+  color: $light-color;
+
+  @media (prefers-color-scheme: dark) {
+    color: $dark-color;
+   }
+
+}

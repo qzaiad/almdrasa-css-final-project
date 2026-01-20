@@ -59,9 +59,17 @@ body{
     font-size: var(--font-size-14);
  }
 
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-font-black);
+    color: var(--color-font-white);
+   }
 }
 
 img {
   max-width: 100%;  // relative to parent element
   height: auto;     // keeps aspect ratio
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-font-black);
+   }
 }
