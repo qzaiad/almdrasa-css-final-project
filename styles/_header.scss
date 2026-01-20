@@ -25,7 +25,7 @@
   margin-bottom: 8rem; // in project 10.3rem
   position: sticky;
   top: 0; // 2rem; // after 2rem starts padding (not good because when scrolling elements will be visible)
-  z-index: 1;
+  z-index: 2;
 
   @include mixins.mobile-tablet {
     grid-template-columns: auto auto;
@@ -170,6 +170,14 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: scale 0.3s;
+
+  &:hover {
+    color: var(--color-font-white);
+    background-color: var(--color-orange);
+    box-shadow: 2.5rem 1.7rem 5.4rem rgba($color: #F53838, $alpha: 01.35);
+    scale: 1.1;
+  }
 
   @include mixins.tablet {
     width: 11.25rem;

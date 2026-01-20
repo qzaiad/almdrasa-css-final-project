@@ -279,7 +279,7 @@ a:hover {
   margin-bottom: 8rem;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 @media (max-width: 900px) {
   .header {
@@ -420,6 +420,13 @@ a:hover {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: scale 0.3s;
+}
+.sign-up:hover {
+  color: var(--color-font-white);
+  background-color: var(--color-orange);
+  box-shadow: 2.5rem 1.7rem 5.4rem #f53838;
+  scale: 1.1;
 }
 @media (min-width: 600px) and (max-width: 900px) {
   .sign-up {
@@ -718,6 +725,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   transition: scale 0.3s;
 }
 @media (max-width: 600px) {
@@ -947,7 +955,7 @@ a:hover {
   font-weight: var(--font-weight-bold);
   width: 25rem;
   height: 6rem;
-  z-index: 0;
+  z-index: 1;
   box-shadow: 2rem 2.6rem 5.4rem rgba(245, 56, 56, 0.35);
   transition: scale 0.3s;
 }
@@ -1014,7 +1022,7 @@ a:hover {
   height: 100vh;
   background-color: #F8F8F8;
   justify-self: center;
-  z-index: -1;
+  z-index: -2;
 }
 
 .footer__content {
@@ -1060,7 +1068,7 @@ a:hover {
   transition: scale 0.3s;
 }
 .footer__socials-img:hover {
-  scale: 1.2;
+  scale: 1.5;
 }
 
 .footer__right {
