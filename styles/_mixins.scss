@@ -16,6 +16,12 @@
   }
 }
 
+@mixin non-mobile {
+  @media (min-width: 900px) {
+    @content; // otherwise Error: Mixin doesn't accept a content block.
+  }
+}
+
 @mixin text-color-default($light-color: var(--color-font-grey), $dark-color: var(--color-font-white)) {
   color: $light-color;
 

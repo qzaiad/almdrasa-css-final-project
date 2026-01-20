@@ -114,9 +114,35 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: color 0.3s;
+    position: relative;
 
     &:hover {
       text-decoration: none;
+    }
+
+    @include mixins.non-mobile {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-orange);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover {
+        color: var(--color-orange);
+        text-decoration: none;
+        
+        &::after {
+          transform: scaleX(1);
+        }
+      }
     }
   }
 
