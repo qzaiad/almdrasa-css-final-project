@@ -206,12 +206,7 @@
   cursor: pointer;
   transition: scale 0.3s;
 
-  &:hover {
-    color: var(--color-font-white);
-    background-color: var(--color-orange);
-    box-shadow: 2.5rem 1.7rem 5.4rem rgba($color: #F53838, $alpha: 01.35);
-    scale: 1.1;
-  }
+  @include mixins.button-on-hover-click();
 
   @include mixins.tablet {
     width: 11.25rem;

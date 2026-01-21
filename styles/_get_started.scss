@@ -57,10 +57,7 @@
     // margin-top: 3rem;
   }
 
-  &:hover {
-    scale: 1.1;
-  }
-
+  @include mixins.button-on-hover-click();
 }
 
 .get-started__pic-content {

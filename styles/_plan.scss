@@ -121,16 +121,5 @@
     height: 4.5rem;
   }
 
-  &:hover {
-    color: var(--color-font-white);
-    background-color: var(--color-orange);
-    box-shadow: 2.5rem 1.7rem 5.4rem rgba($color: #F53838, $alpha: 0.35);
-    scale: 1.1;
-  }
-
-  // &-last {
-    // color: var(--color-font-white);
-    // background-color: var(--color-orange);
-    // box-shadow: 2.5rem 1.7rem 5.4rem rgba($color: #F53838, $alpha: 0.35);
-  // }
+  @include mixins.button-on-hover-click();
 }
