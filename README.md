@@ -30,6 +30,7 @@ open index.html
 ## 🛠 Usage
 - Resize the browser to explore responsive layouts.
 - Modify `.scss` files and compile to CSS for custom styles.
+- Adapting caolors for dark mode
 
 
 ## 📂 Structure
